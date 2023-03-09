@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>On-Campus</fullName>
+        <default>false</default>
+        <label>On-Campus</label>
+    </customValue>
+    <customValue>
+        <fullName>Online</fullName>
+        <default>false</default>
+        <label>Online</label>
+    </customValue>
+    <customValue>
+        <fullName>Evenings and Weekends</fullName>
+        <default>false</default>
+        <label>Evenings and Weekends</label>
+    </customValue>
+    <customValue>
+        <fullName>Yes</fullName>
+        <default>false</default>
+        <label>Yes</label>
+    </customValue>
+    <customValue>
+        <fullName>No</fullName>
+        <default>false</default>
+        <label>No</label>
+    </customValue>
+    <customValue>
+        <fullName>Teacher Residency</fullName>
+        <default>false</default>
+        <label>Teacher Residency</label>
+    </customValue>
+    <customValue>
+        <fullName>Work and Learn</fullName>
+        <default>false</default>
+        <label>Work and Learn</label>
+    </customValue>
+    <description>Types that a program can be delivered.</description>
+    <masterLabel>Delivery Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

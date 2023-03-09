@@ -90,6 +90,13 @@ tasks:
         options:
             recipe: datasets/snowfackery/school_recipe.yml
 
+    update_admin_profile:
+        options:
+            record_types:
+                - record_type: Program__c.Academic_Program
+                  default: true
+                - record_type: Program__c.Recruitment_Program
+
 flows:
     config_dev:
         steps:
@@ -107,3 +114,5 @@ flows:
                 task: create_fake_school_data
             9:
                 task: sea:load_sample_data
+            10:
+                task: update_admin_profile

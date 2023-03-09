@@ -1,0 +1,7 @@
+<!--
+ - Created by Thaddaeus Dahlberg, Software Engineer, University of St. Thomas on 3/8/2023.
+ -->
+
+<apex:page id="SummitEventsUSTProgramLookup" standardController="summit__Summit_Events__c" extensions="SummitEventsUSTProgramLookupExtension">
+    <apex:slds/>
+</apex:page>
