@@ -1,8 +1,8 @@
 minimum_cumulusci_version: '3.73.0'
 project:
-    name: Summit-Events-App-As-Depencency
+    name: Summit-Events-App-UST-Program-Code-Selector
     package:
-        name: Summit-Events-App-As-Depencency
+        name: Summit-Events-App-UST-Program-Code-Selector
         api_version: '56.0'
     dependencies:
         - github: 'https://github.com/SFDO-Community/Summit-Events-App.git'
