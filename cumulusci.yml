@@ -96,6 +96,13 @@ tasks:
                 - record_type: Program__c.Academic_Program
                   default: true
                 - record_type: Program__c.Recruitment_Program
+                - record_type: Account.Administrative
+                  default: true
+                - record_type: Account.Business_Organization
+                - record_type: Account.Educational_Institution
+                - record_type: Account.HH_Account
+                - record_type: Account.Sports_Organization
+                - record_type: Account.University_Department
 
 flows:
     config_dev:
