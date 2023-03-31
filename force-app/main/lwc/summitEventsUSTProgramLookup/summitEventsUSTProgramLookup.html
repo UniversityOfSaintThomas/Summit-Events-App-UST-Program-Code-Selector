@@ -1,0 +1,27 @@
+<!--
+ - Created by Thaddaeus Dahlberg, Software Engineer, University of St. Thomas on 3/27/2023.
+ -->
+
+<!-- Summit Events Ust Program Lookup -->
+<template>
+    <lightning-combobox
+            label="St Thomas School"
+            options={st_thomas_school_picklist}
+            aria-label="St Thomas School"
+            onchange={handleOnChange}
+            value={st_thomas_school_picklist_value}
+    >
+    </lightning-combobox>
+    <lightning-dual-listbox
+            label='Programs'
+            source-label="Available"
+            selected-label="Selected"
+            options={st_thomas_program_picklist}
+            aria-label="Academic Interest"
+            onchange={handleOnChange}
+            field-level-help=""
+            variant="label-stacked"
+            disable-reordering="true"
+    >
+    </lightning-dual-listbox>
+</template>
