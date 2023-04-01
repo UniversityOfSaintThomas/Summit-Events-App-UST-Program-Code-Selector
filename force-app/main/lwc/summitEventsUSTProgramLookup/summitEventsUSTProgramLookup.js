@@ -171,4 +171,3 @@ export default class SummitEventsUstProgramLookup extends LightningElement {
     }
 
 }
-
