@@ -34,12 +34,10 @@ public with sharing class SummitEventsUSTProgramLookup {
                         'WHERE RecordType.DeveloperName = \'Recruitment_Program\' ' +
                         'AND Program_Display__c INCLUDES (\'RFI\') ' +
                         'AND Active__c = true';
-        if (school_name.equalsIgnoreCase('Undergraduate') || school_name.equalsIgnoreCase('Dougherty Family College')  || school_name.equalsIgnoreCase('No College Designated')) {
-            query_string += ' AND (Academic_Level__c = \'Undergraduate\' OR Academic_Level__c = \'U\') ';
+        if (school_name.equalsIgnoreCase('Undergraduate') || school_name.equalsIgnoreCase('Dougherty Family College') || school_name.equalsIgnoreCase('No College Designated')) {
             query_string += ' AND (Program_Type__c INCLUDES (\'Major\') OR Program_Type__c INCLUDES (\'Pre-Professional\') OR Program_Major_Concentration__c IN :programListCodes) ';
         } else {
-            query_string += ' AND (Academic_Level__c = \'Graduate\' OR Academic_Level__c = \'G\')  ';
-                query_string += ' AND ( Associated_Schools__c INCLUDES (\'' + school_name + '\') OR Program_Major_Concentration__c IN :programListCodes ) ';
+            query_string += ' AND ( Associated_Schools__c INCLUDES (\'' + school_name + '\') OR Program_Major_Concentration__c IN :programListCodes ) ';
             if (school_name == 'School of Law') {
                 query_string += ' AND Banner_Program_Code__c LIKE \'LW_%\'';
             }
