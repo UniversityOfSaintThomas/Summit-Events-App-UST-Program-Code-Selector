@@ -15,7 +15,7 @@ import SEA_PROGRAM1 from '@salesforce/schema/summit__Summit_Events__c.summit__Pr
 import SEA_PROGRAM2 from '@salesforce/schema/summit__Summit_Events__c.summit__Program_Filter_2__c';
 import SEA_PROGRAM3 from '@salesforce/schema/summit__Summit_Events__c.summit__Program_Filter_3__c';
 import SEA_SCHOOL_BANNER_CODE from '@salesforce/schema/summit__Summit_Events__c.summit__Account__r.Banner_Code__c';
-import SEA_SCHOOL_NAME from '@salesforce/schema/summit__Summit_Events__c.summit__Account__r.Name';
+import SEA_SCHOOL_NAME from '@salesforce/schema/summit__Summit_Events__c.summit__Account__r.School_College_Name__c';
 
 export default class SummitEventsUstProgramLookup extends LightningElement {
     @api recordId;
@@ -76,7 +76,7 @@ export default class SummitEventsUstProgramLookup extends LightningElement {
                 } else {
                     values.push(
                         {
-                            label: data[key].Name,
+                            label: data[key].School_College_Name__c,
                             value: data[key].Banner_Code__c
                         }
                     )

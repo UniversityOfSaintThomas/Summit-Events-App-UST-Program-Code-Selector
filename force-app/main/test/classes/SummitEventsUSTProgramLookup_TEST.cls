@@ -43,13 +43,15 @@ private class SummitEventsUSTProgramLookup_TEST {
         Account college_account1 = new Account(
                 Name = 'School of Law',
                 RecordTypeId = administrative_id,
-                Banner_Key__c = 'STVCOLL-LAW'
+                Banner_Key__c = 'STVCOLL-LAW',
+                School_College_Name__c = 'School of Law'
         );
         accounts_to_insert.add(college_account1);
         Account college_account2 = new Account(
                 Name = 'Undergraduate',
                 RecordTypeId = administrative_id,
-                Banner_Key__c = 'STVCOLL-UG'
+                Banner_Key__c = 'STVCOLL-UG',
+                School_College_Name__c = 'Undergraduate'
         );
         accounts_to_insert.add(college_account2);
         insert accounts_to_insert;
@@ -66,11 +68,11 @@ private class SummitEventsUSTProgramLookup_TEST {
 
     @IsTest
     static void testProgramLookup() {
-        Map<Id, Program__C> program = SummitEventsUSTProgramLookup.getPrograms('School of Law', '');
-        Map<Id, Program__C> program2 = SummitEventsUSTProgramLookup.getPrograms('Undergraduate', '');
+        Map<Id, Program__c> program = SummitEventsUSTProgramLookup.getPrograms('School of Law', '');
+        Map<Id, Program__c> program2 = SummitEventsUSTProgramLookup.getPrograms('Undergraduate', '');
 
         Test.startTest();
-        System.assertEquals(1, program.size());
+        System.assertEquals(2, program.size());
         System.assertEquals(1, program2.size());
         Test.stopTest();
     }
