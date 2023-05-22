@@ -9,6 +9,7 @@ Insert Account:
         - Name
         - RecordTypeId
         - Surrogate_ID__c
+        - School_College_Name__c
     lookups:
         ParentId:
             table: Account

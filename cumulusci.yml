@@ -123,3 +123,5 @@ flows:
                 task: sea:load_sample_data
             10:
                 task: update_admin_profile
+            11:
+                task: create_bulk_data_permission_set

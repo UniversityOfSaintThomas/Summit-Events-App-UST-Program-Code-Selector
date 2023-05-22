@@ -7,6 +7,8 @@ public with sharing class SummitEventsUSTProgramLookup {
 
     @AuraEnabled(Cacheable=true)
     public static Map<Id, Account> getStThomasSchools() {
+        // This method is used to create the school picklist at the top of the LWC
+        // Schools are all accounts
         Map<Id, Account> schoolMapId = new Map<Id, Account>([
                 SELECT Id, Banner_Code__c, Name, School_College_Name__c
                 FROM Account
@@ -22,6 +24,8 @@ public with sharing class SummitEventsUSTProgramLookup {
 
     @AuraEnabled(Cacheable=true)
     public static Map<Id, Program__c> getPrograms(String school_name, String programs_selected) {
+        //This method is used to find schools related to the selected school account.
+        // In order to preserve the previous selected schools we want to include those program codes in our query.
         List<String> programListCodes = programs_selected.unescapeHtml4().split(';');
         String query_string =
                 'SELECT ' +
@@ -44,9 +48,6 @@ public with sharing class SummitEventsUSTProgramLookup {
                     'OR Program_Major_Concentration__c IN :programListCodes) ';
         } else {
             query_string += ' AND ( Associated_Schools__c INCLUDES (\'' + school_name + '\') OR Program_Major_Concentration__c IN :programListCodes ) ';
-//            if (school_name == 'School of Law') {
-//                query_string += ' AND Banner_Program_Code__c LIKE \'LW_%\'';
-//            }
         }
         query_string += ' ORDER BY Program_Name_on_Application__c';
 
